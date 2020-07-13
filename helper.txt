@@ -1,0 +1,38 @@
+Venues
+const renderVenues = (venues) => {
+  $venueDivs.forEach(($venue, index) => {
+    const venue = venues[index];
+    const venueIcon = venue.categories[0].icon;
+    const venueImgSrc = `${venueIcon.prefix}bg_64${venueIcon.suffix}`;
+    let venueContent = createVenueHTML(venue.name, venue.location, venueImgSrc);
+    $venue.append(venueContent);
+  });
+  $destination.append(`<h2>${venues[0].location.city}</h2>`);
+}
+
+<h2>VENUE_NAME_PROPERTY</h2>
+<img class="venueimage" src="VENUE_IMAGE_SOURCE"/>
+<h3>Address:</h3>
+<p>VENUE_LOCATION_ADDRESS</p>
+<p>VENUE_LOCATION_CITY</p>
+<p>VENUE_LOCATION_COUNTRY</p>
+
+const createVenueHTML = (name, location, iconSource) => {
+  return `<h2>${name}</h2>
+  <img class="venueimage" src="${iconSource}"/>
+  <h3>Address:</h3>
+  <p>${location.address}</p>
+  <p>${location.city}</p>
+  <p>${location.country}</p>`;
+}
+
+Weather
+<h2> High: CURRENT_DAY_MAX_TEMP_F</h2>
+<h2> Low: CURRENT_DAY_MIN_TEMP_F</h2>
+<img src="http://CURRENT_DAY_CONDITION_ICON" class="weathericon" />
+<h2>DAY_OF_THE_WEEK</h2>
+
+const renderForecast = (day) => {
+  const weatherContent = createWeatherHTML(day);
+  $weatherDiv.append(weatherContent);
+};
