@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Tour World</title>
     <link rel="stylesheet" type="text/css" href="./resources/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./resources/js/helperFunctions.js"></script>
+    <script defer src="./resources/js/index.js"></script>
   </head>
   <body>
     <header>
@@ -15,78 +29,56 @@
     <main>
       <h1>Where do you want to land?</h1>
       <form autocomplete="off">
-        <input type="text" id="city">
+        <input class="input" type="text" id="city" />
         <button id="button" type="submit">Submit</button>
       </form>
     </main>
     <div class="container">
-        <div id="destination">
-
+      <div id="destination"></div>
+      <div class="sectiontitle">
+        <h2>CURRENT WEATHER</h2>
+      </div>
+      <section id="weather">
+        <div class="weather" id="weather1"></div>
+      </section>
+      <div class="sectiontitle">
+        <h2>TOP ATTRACTIONS</h2>
+      </div>
+      <section id="venues">
+        <div class="venue" id="venue1"></div>
+        <div class="venue" id="venue2"></div>
+        <div class="venue" id="venue3"></div>
+        <div class="venue" id="venue4"></div>
+        <div class="venue" id="venue5"></div>
+        <div class="venue" id="venue6"></div>
+        <div class="venue" id="venue7"></div>
+        <div class="venue" id="venue8"></div>
+        <div class="venue" id="venue9"></div>
+        <div class="venue" id="venue10"></div>
+      </section>
+      <footer>
+        <div class="copyright">
+          &copy;
+          <a href="https://derickmakuto.tech/" target="_blank" class="link"
+            ><p>2021 Simiyu Derick Makuto.</p></a
+          >
+          <p>Powered by</p>
+          <a
+            href="https://developer.foursquare.com/"
+            target="_blank"
+            class="link"
+            >foursquare.com</a
+          >.
+          <p>and</p>
+          <a
+            href="https://openweathermap.org/"
+            target="_blank"
+            class="link"
+            rel="noopenner"
+            >openweathermap.org</a
+          >.
         </div>
-        <div class="sectiontitle">
-            <h2>CURRENT WEATHER</h2>
-        </div>
-        <section id="weather">
-
-            <div class="weather" id="weather1">
-
-            </div>
-
-        </section>
-        <div class="sectiontitle">
-            <h2>TOP ATTRACTIONS</h2>
-        </div>
-        <section id="venues">
-            <div class="venue" id="venue1">
-
-            </div>
-            <div class="venue" id="venue2">
-
-            </div>
-            <div class="venue" id="venue3">
-
-            </div>
-            <div class="venue" id="venue4">
-
-            </div>
-            <div class="venue" id="venue5">
-
-            </div>
-            <div class="venue" id="venue6">
-
-            </div>
-            <div class="venue" id="venue7">
-
-            </div>
-            <div class="venue" id="venue8">
-
-            </div>
-            <div class="venue" id="venue9">
-
-            </div>
-            <div class="venue" id="venue10">
-
-            </div>
-        </section>
-        <footer>
-            <div class="copyright">
-                &copy; <a href="https://derickmakuto.tech/" target="_blank" class="link"><p>Derick Simiyu.</p></a> 
-                <p>Powered by</p>
-                <a href="https://developer.foursquare.com/" target="_blank" class="link">foursquare.com</a>.
-                <P>and</P>
-                <a href="https://openweathermap.org/" target="_blank" class="link">openweathermap.org</a>.
-                
-            </div>
-        </footer>
-      
-        
-
+      </footer>
     </div>
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-    <script src="./resources/js/helperFunctions.js"></script>
-    <script src="./resources/js/index.js"></script>
   </body>
 </html>
